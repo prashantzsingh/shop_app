@@ -28,8 +28,7 @@ class Product with ChangeNotifier {
     final oldStatus = isFavorite;
     isFavorite = !isFavorite;
     notifyListeners();
-    final url = Uri.parse(
-        'https://shopapps-e4ee4-default-rtdb.firebaseio.com/products/$id.json');
+    final url = Uri.parse('your firebase link/$id.json');
     try {
       final response = await http.patch(
         url,
